@@ -7,12 +7,14 @@ const roomInformation = [
 
 const plantsQuantity = { text: '3', icon: '🪴' };
 
+const temperature = { text: '22°C', icon: '🌡️' };
+
 function App () {
 	
 	return (
 		<div className="w-screen h-screen bg-gray-100 p-10">
 			<Card title="Salon"
-				  topRightText="22°C"
+				  topRightText={temperature}
 				  informations={roomInformation}
 				  bottomRightCard={plantsQuantity}
 				  functionOnClick={() => console.log('click')}
