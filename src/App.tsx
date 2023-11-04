@@ -17,7 +17,7 @@ function App () {
 				  topRightText={temperature}
 				  informations={roomInformation}
 				  bottomRightCard={plantsQuantity}
-				  functionOnClick={() => console.log('click')}
+				  functionOnClick={() => alert('You clicked on the card!')}
 			/>
 		</div>
 	);
