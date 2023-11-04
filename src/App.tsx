@@ -1,4 +1,5 @@
-import Card from './Components/Molecules/Card.tsx';
+import Card from './Components/Molecules/Card/Card.tsx';
+import DisplayCard from './Components/Molecules/Card/CardContentComponent/DisplayCard/DisplayCard.tsx';
 
 const roomInformation = [
 	{ text: '100%', icon: '😊' },
@@ -13,12 +14,12 @@ function App () {
 	
 	return (
 		<div className="w-screen h-screen bg-gray-100 p-10">
-			<Card title="Salon"
-				  topRightText={temperature}
-				  informations={roomInformation}
-				  bottomRightCard={plantsQuantity}
-				  functionOnClick={() => alert('You clicked on the card!')}
-			/>
+			<Card functionOnClick={() => alert('You clicked on the card!')}>
+				<DisplayCard title="Salon"
+							 topRightText={temperature}
+							 informations={roomInformation}
+							 bottomRightCard={plantsQuantity}/>
+			</Card>
 		</div>
 	);
 }
