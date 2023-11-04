@@ -1,4 +1,4 @@
-﻿import { getUniqueID } from '../../../../../Helpers/UniqueId.Helper.ts';
+﻿import { getUniqueID } from '../../../../../Helpers/uniqueId.helper.ts';
 import IconWithText from '../../../../Atoms/IconWithText/IconWithText.tsx';
 
 interface ITextWithIcon {
