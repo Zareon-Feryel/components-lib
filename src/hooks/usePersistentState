@@ -1,0 +1,14 @@
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+
+export default function usePersistentHook<StateType> (key: string, initialValue?: StateType): [StateType, Dispatch<SetStateAction<StateType>>] {
+    const [state, setState] = useState<StateType>(() => {
+        const sessionStorageValue = sessionStorage.getItem(key);
+        return (sessionStorageValue ? JSON.parse(sessionStorageValue) : initialValue) as StateType;
+    });
+
+    useEffect(() => {
+        sessionStorage.setItem(key, JSON.stringify(state));
+    }, [key, state])
+    
+    return [state, setState];
+}
